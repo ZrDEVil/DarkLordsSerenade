@@ -1,10 +1,25 @@
 fileFormatVersion: 2
-guid: 50d1d8293cd01f34f98f36b2cf14b9e7
+guid: 5b8ac3b48d3ce374d9e8eb65766c0e84
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 21300000
-    second: Ground_0
+      213: 5569329726105825983
+    second: Fire_III_Flame_C_80x48_0
+  - first:
+      213: -397950380417199142
+    second: Fire_III_Flame_C_80x48_1
+  - first:
+      213: 7952631042897555842
+    second: Fire_III_Flame_C_80x48_2
+  - first:
+      213: 6900630261620826785
+    second: Fire_III_Flame_C_80x48_3
+  - first:
+      213: -3622619926259012825
+    second: Fire_III_Flame_C_80x48_4
+  - first:
+      213: -6618582364334753719
+    second: Fire_III_Flame_C_80x48_5
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -50,7 +65,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -65,12 +80,12 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
-  applyGammaDecoding: 1
+  applyGammaDecoding: 0
   cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 8192
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -79,10 +94,10 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 8192
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -91,34 +106,10 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 8192
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
-  - serializedVersion: 3
-    buildTarget: iPhone
-    maxTextureSize: 8192
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Windows Store Apps
-    maxTextureSize: 8192
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -127,10 +118,34 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Server
-    maxTextureSize: 8192
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -139,18 +154,18 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Ground_0
+      name: Fire_III_Flame_C_80x48_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 86
-        width: 64
-        height: 64
+        y: 0
+        width: 80
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +173,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 02305410000000000800000000000000
-      internalID: 21300000
+      spriteID: fb2bf89d0eb3a4d40800000000000000
+      internalID: 5569329726105825983
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ground_1
+      name: Fire_III_Flame_C_80x48_1
       rect:
         serializedVersion: 2
-        x: 64
-        y: 86
-        width: 64
-        height: 64
+        x: 80
+        y: 0
+        width: 80
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,20 +194,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef34dab0038bb6a42a0a042e88f8cb76
-      internalID: 1135573188
+      spriteID: ad35009cc323a7af0800000000000000
+      internalID: -397950380417199142
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ground_2
+      name: Fire_III_Flame_C_80x48_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 22
-        width: 64
-        height: 64
+        x: 160
+        y: 0
+        width: 80
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,20 +215,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c817bab6704def43a1c2c3e77aa1260
-      internalID: 1308333201
+      spriteID: 28137a57ccb6d5e60800000000000000
+      internalID: 7952631042897555842
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ground_3
+      name: Fire_III_Flame_C_80x48_3
       rect:
         serializedVersion: 2
-        x: 64
-        y: 22
-        width: 64
-        height: 64
+        x: 240
+        y: 0
+        width: 80
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,8 +236,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bae36854249a8114885f55cc54fd6611
-      internalID: -895042232
+      spriteID: 1a2683e69a6f3cf50800000000000000
+      internalID: 6900630261620826785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_III_Flame_C_80x48_4
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 80
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72b641bde5ed9bdc0800000000000000
+      internalID: -3622619926259012825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_III_Flame_C_80x48_5
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 0
+        width: 80
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 948792908621624a0800000000000000
+      internalID: -6618582364334753719
       vertices: []
       indices: 
       edges: []
@@ -230,7 +287,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: d22575511a0d7d3459562ab1c0a8b02a
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -238,10 +295,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Ground_0: 21300000
-      Ground_1: 1135573188
-      Ground_2: 1308333201
-      Ground_3: -895042232
+      Fire_III_Flame_C_80x48_0: 5569329726105825983
+      Fire_III_Flame_C_80x48_1: -397950380417199142
+      Fire_III_Flame_C_80x48_2: 7952631042897555842
+      Fire_III_Flame_C_80x48_3: 6900630261620826785
+      Fire_III_Flame_C_80x48_4: -3622619926259012825
+      Fire_III_Flame_C_80x48_5: -6618582364334753719
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
