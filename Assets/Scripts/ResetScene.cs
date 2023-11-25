@@ -34,7 +34,8 @@ public class ResetScene : MonoBehaviour
     public void Reset() {
         PlayerController.InstanciaPlayerController.RestartCheckpoint();
         PlayerController.InstanciaPlayerController.RestartCoins();
-        CoinsController.InstanciaCoinsController.RestartCoins();
+        MapItemsController.InstanciaMapItemsController.RestartItems();
         EnemiesController.InstanciaEnemiesController.RestartEnemies();
+        PlayerController.InstanciaPlayerController.RestartPlayer();
     }
 }

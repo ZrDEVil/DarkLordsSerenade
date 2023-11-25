@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class EnemiesController : MonoBehaviour
 {
-    [SerializeField] private GameObject enemiesPatrolObj;
-    private EnemyPatrol[] enemyPatrolArray;
+    [SerializeField] private GameObject enemiesObj;
+    private Enemy[] enemiesArray;
     private int countEnemiesPatrol;
+    private int enemiesIndex = 0;
 
     [SerializeField] public static GameObject instanciaEnemiesController;
     private static EnemiesController _instanciaEnemiesController;
@@ -36,18 +37,19 @@ public class EnemiesController : MonoBehaviour
     }
 
     private void GetEnemies() {
-        countEnemiesPatrol = enemiesPatrolObj.transform.childCount;
-        enemyPatrolArray = new EnemyPatrol[countEnemiesPatrol];
+        countEnemiesPatrol = enemiesObj.transform.childCount;
+        enemiesArray = new Enemy[countEnemiesPatrol];
 
         for(int i = 0;i < countEnemiesPatrol;i++) {
-            enemyPatrolArray[i] = enemiesPatrolObj.transform.GetChild(i).gameObject.GetComponent<EnemyPatrol>();
+            enemiesArray[enemiesIndex] = enemiesObj.transform.GetChild(i).gameObject.GetComponent<Enemy>();
+            enemiesIndex++;
         }
     }
 
     public void RestartEnemies() {
         for(int i = 0;i < countEnemiesPatrol;i++) {
-            enemyPatrolArray[i].gameObject.SetActive(true);
-            enemyPatrolArray[i].Restart();
+            enemiesArray[i].gameObject.SetActive(true);
+            enemiesArray[i].Restart();
         }
     }
 }

@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyPatrol : MonoBehaviour
+public class EnemyPatrol : Enemy
 {
     [SerializeField] private bool isFacingRight;
     [SerializeField] private float moveSpeed;
     [SerializeField] private float pauseTime;
     [SerializeField] private bool stopped = false;
     [SerializeField] private float[] pointPositions;
+    [SerializeField] private int enemyDamage = 1;
 
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
@@ -16,27 +17,37 @@ public class EnemyPatrol : MonoBehaviour
     private float currentMoveSpeed;
     private Vector2 startingPosition;
     private bool isFacingRightStart;
-    private bool killed = false;
+    private BoxCollider2D boxCollider;
+    
     private Animator animator;
+
+    private void Awake()
+    {
+        SetBaseDamage(enemyDamage);
+    }
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+        boxCollider = GetComponent<BoxCollider2D>();
 
         startingPosition = new Vector2(transform.position.x,transform.position.y);
         isFacingRightStart = isFacingRight;
 
         InitEdgePositions();
+
         currentMoveSpeed = moveSpeed;
     }
 
     // Update is called once per frame
     void FixedUpdate()
-    { 
-        EnemyMovement();
-        CheckEdgePatrol();
+    {
+        if(!killed) {
+            EnemyMovement();
+            CheckEdgePatrol();
+        }
         GetAnimations();
     }
 
@@ -99,32 +110,45 @@ public class EnemyPatrol : MonoBehaviour
         points.GetChild(1).GetComponent<SpriteRenderer>().enabled = false;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision) {
-        if(collision.tag == "Player") {
-            DamagePlayer();
+    private void OnTriggerStay2D(Collider2D collision) {
+        if(collision.tag == "Player" && !PlayerController.InstanciaPlayerController.IsPlayerHit()) {
+            DamagePlayer(enemyDamage);
         }
     }
 
-    private void DamagePlayer() {
-        if(!killed) {
-            ResetScene.InstanciaResetScene.Reset();
-        }
-    }
-
-    public void Restart() {
+    public override void Restart() {
         transform.position = startingPosition;
         isFacingRight = isFacingRightStart;
         stopped = false;
         killed = false;
-    }
-
-    public void Kill() {
-        killed = true;
+        boxCollider.enabled = true;
     }
 
     private void GetAnimations()
     {
         animator.SetFloat("Speed", currentMoveSpeed);
+        animator.SetBool("Killed", killed);
+    }
+
+    public override void Kill() {
+        StartCoroutine(KillCoroutine());
+    }
+
+    private IEnumerator KillCoroutine() {
+        
+        DisableEnemy();
+        yield return new WaitForSeconds(0.5f);
+        gameObject.SetActive(false);
+    }
+
+    private void DisableEnemy() {
+        killed = true;
+        rb.velocity = new Vector2(0, 0);
+        boxCollider.enabled = false;
+    }
+
+    public override void SetBaseDamage(int baseDamage) {
+        damage = baseDamage;
     }
 
 }

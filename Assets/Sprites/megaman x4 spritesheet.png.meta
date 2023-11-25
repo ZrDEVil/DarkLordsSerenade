@@ -393,7 +393,7 @@ TextureImporter:
       name: x_walking_6
       rect:
         serializedVersion: 2
-        x: 29
+        x: 30
         y: 261
         width: 56
         height: 94
@@ -498,7 +498,7 @@ TextureImporter:
       name: x_walking_11
       rect:
         serializedVersion: 2
-        x: 473
+        x: 474
         y: 259
         width: 79
         height: 92
@@ -792,7 +792,7 @@ TextureImporter:
       name: x_jumping_2
       rect:
         serializedVersion: 2
-        x: 131
+        x: 130
         y: 27
         width: 48
         height: 109
@@ -1027,8 +1027,8 @@ TextureImporter:
       megaman x4 spritesheet_29: -1923983433
       megaman x4 spritesheet_26: 344104670
       x_idle_3: 2142563611
-      x_running_0: 316924674
       x_idle_5: -1958433759
+      x_running_0: 316924674
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
