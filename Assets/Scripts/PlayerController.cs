@@ -287,7 +287,7 @@ public class PlayerController: MonoBehaviour
         rb.velocity = new Vector2(0, 0);
         isPlayerAttacking = true;
         //Sacando a espada
-        yield return new WaitForSeconds(0.075f);
+        yield return new WaitForSeconds(0.05f);
 
         //Aplicando dano
         swordCollider.SetActive(true);
