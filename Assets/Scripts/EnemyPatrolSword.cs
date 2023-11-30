@@ -173,6 +173,7 @@ public class EnemyPatrolSword: Enemy
         transform.localScale = initialScale;
         currentMoveSpeed = moveSpeed;
         rb.velocity = new Vector2(initialVelocityX, 0);
+        swordCollider.SetActive(false);
 
     }
 
